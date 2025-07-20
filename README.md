@@ -23,12 +23,13 @@ The training alternates between:
 
 ## 🚀 Features
 
-- **Style Transfer**: Transform photographs into Monet-style paintings
+- **DCGAN Implementation**: Deep Convolutional GAN architecture specifically designed for image generation
+- **Monet Style Generation**: Creates authentic Monet-style paintings from scratch using learned artistic patterns
 - **Data Preprocessing**: Comprehensive exploratory data analysis (EDA) with data inspection, visualization, and cleaning
-- **GAN Architecture**: Custom implementation of generator and discriminator networks
-- **Efficient Data Loading**: Uses TFRecord format for optimized data handling
-- **Training Pipeline**: Complete training workflow with monitoring and evaluation
-- **Visualization**: Tools to display and compare original photos with generated Monet-style images
+- **Efficient Data Loading**: Uses TFRecord format for optimized TensorFlow data handling
+- **Advanced Training Pipeline**: Adversarial training with alternating generator and discriminator updates
+- **Visualization Tools**: Display functions for image grids and training progress monitoring
+- **Kaggle Competition Ready**: Implementation optimized for competitive machine learning standards
 
 ## 📋 Dependencies
 
@@ -107,13 +108,14 @@ jupyter notebook monet_gans.ipynb
 
 ### Key Functions
 
-The notebook implements several utility functions:
+The notebook implements several key functions:
 
-- `count_images_in_folder()`: Counts image files in directories
-- Data loading functions for TFRecord processing
-- Visualization functions for displaying image grids
-- Model architecture definitions for generator and discriminator
-- Training loop implementation
+- `count_images_in_folder()`: Counts image files in directories with support for various image formats
+- `display_images()`: Displays up to the first nine JPEG images in a directory on a 3×3 grid
+- TFRecord data loading and preprocessing functions
+- DCGAN generator and discriminator architecture definitions
+- Adversarial training loop with alternating updates
+- Visualization utilities for monitoring training progress
 
 ## 🧠 Technical Implementation
 
@@ -123,10 +125,11 @@ The notebook implements several utility functions:
 - **Preprocessing**: Normalization, augmentation, and batching
 
 ### Model Architecture
-The project implements a GAN-based approach with:
-- **Generator Network**: Transforms input noise/features into Monet-style images
-- **Discriminator Network**: Distinguishes between real Monet paintings and generated images
-- **Loss Functions**: Adversarial loss for realistic image generation
+The project implements a **DCGAN architecture** with:
+- **Generator Network**: Deep convolutional network that transforms random noise into authentic Monet-style images
+- **Discriminator Network**: Convolutional classifier that distinguishes between real Monet paintings and generated images
+- **Adversarial Loss**: Minimax game formulation where generator maximizes discriminator error while discriminator minimizes classification error
+- **Convolutional Layers**: Deep convolutional architecture optimized for high-quality image generation
 
 ### Training Process
 - **Adversarial Training**: Generator and discriminator trained alternately
@@ -170,11 +173,12 @@ This project is available for educational and research purposes. Please ensure a
 
 ## 📚 References
 
-- Original assignment: Peer-graded Assignment: Week 5: GANs
-- TensorFlow documentation: https://www.tensorflow.org/
-- GAN architecture principles and best practices
-- Style transfer research papers and implementations
+- **Original Assignment**: Peer-graded Assignment: Week 5: GANs
+- **Kaggle Competition**: "I'm Something of a Painter Myself" - Monet Style Transfer
+- **TensorFlow Documentation**: https://www.tensorflow.org/
+- **DCGAN Paper**: Radford, A., et al. "Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks" (2015)
+- **GAN Fundamentals**: Goodfellow, I., et al. "Generative Adversarial Networks" (2014)
 
 ---
 
-**Note**: This project demonstrates the application of GANs for artistic style transfer, specifically focused on Claude Monet's impressionist painting style. The implementation serves as both a learning tool and a practical application of deep learning techniques in computer vision and generative modeling.
+**Note**: This project demonstrates the application of **Deep Convolutional GANs** for artistic style generation, specifically focused on Claude Monet's impressionist painting style. The implementation serves as both a comprehensive learning tool and a competitive-level solution for machine learning challenges in computer vision and generative modeling. The DCGAN architecture enables high-quality image generation through adversarial training between convolutional generator and discriminator networks.
